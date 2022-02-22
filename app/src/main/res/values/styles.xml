@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="list_cardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/list_card_margin</item>
+    </style>
+
+    <style name="list_text_details">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/list_text_padding</item>
+        <item name="android:paddingEnd">@dimen/list_text_padding</item>
+        <item name="android:textSize">@dimen/list_details_text_size</item>
+    </style>
+
+    <style name="list_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/list_button_padding</item>
+    </style>
+
+    <style name="form_text_input_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/form_margin</item>
+        <item name="android:layout_marginStart">@dimen/form_margin</item>
+        <item name="android:layout_marginEnd">@dimen/form_margin</item>
+    </style>
+
+    <style name="form_input_edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="form_input_drop_down" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/form_margin</item>
+        <item name="android:layout_marginTop">@dimen/form_margin</item>
+        <item name="android:layout_marginEnd">@dimen/form_margin</item>
+    </style>
+
+    <style name="form_card_heading">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/form_card_heading_text_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:padding">@dimen/form_card_heading_padding</item>
+    </style>
+
+    <style name="form_card_divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/form_card_divider_height</item>
+    </style>
+
+    <style name="form_radio_button">
+        <item name="android:layout_width">@dimen/dimen_0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="form_check_box">
+        <item name="android:layout_width">@dimen/dimen_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="form_card_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/form_margin</item>
+        <item name="android:layout_marginEnd">@dimen/form_margin</item>
+        <item name="android:layout_marginTop">@dimen/form_margin</item>
+    </style>
+
+</resources>

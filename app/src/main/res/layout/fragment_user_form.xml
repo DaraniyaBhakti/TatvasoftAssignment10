@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.UserFormFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/name"
+                app:boxCornerRadiusTopEnd="@dimen/form_input_box_radius"
+                app:boxCornerRadiusTopStart="@dimen/form_input_box_radius"
+                app:boxStrokeWidthFocused="@dimen/form_input_box_stroke"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Caption"
+                style="@style/form_text_input_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEditText"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    style="@style/form_input_edit_text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/contact_number"
+                app:boxCornerRadiusTopEnd="@dimen/form_input_box_radius"
+                app:boxCornerRadiusTopStart="@dimen/form_input_box_radius"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Caption"
+                style="@style/form_text_input_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactNumberEditText"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    style="@style/form_input_edit_text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:hint="@string/date_of_birth"
+                app:boxCornerRadiusTopEnd="@dimen/form_input_box_radius"
+                app:boxCornerRadiusTopStart="@dimen/form_input_box_radius"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Caption"
+                style="@style/form_text_input_layout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/birthDatePicker"
+                    android:inputType="none"
+                    android:maxLength="10"
+                    style="@style/form_input_edit_text"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/form_input_drop_down"
+                android:hint="@string/blood_group"
+                app:boxCornerRadiusTopEnd="@dimen/form_input_box_radius"
+                app:boxCornerRadiusTopStart="@dimen/form_input_box_radius"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="?attr/textAppearanceCaption"
+                >
+                <AutoCompleteTextView
+                    android:id="@+id/bloodGroupSpinner"
+                    style="@style/form_input_edit_text"
+                    android:inputType="none"
+                    android:imeOptions="actionDone"
+                    android:dropDownWidth="wrap_content"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/form_input_drop_down"
+                android:hint="@string/country"
+                app:boxCornerRadiusTopEnd="@dimen/form_input_box_radius"
+                app:boxCornerRadiusTopStart="@dimen/form_input_box_radius"
+                app:boxStrokeWidthFocused="2dp"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="?attr/textAppearanceCaption"
+                >
+                <AutoCompleteTextView
+                    android:id="@+id/countrySpinner"
+                    style="@style/form_input_edit_text"
+                    android:inputType="none"
+                    android:imeOptions="actionDone"
+                    tools:ignore="LabelFor" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.cardview.widget.CardView
+                style="@style/form_card_view"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="@string/gender"
+                        style="@style/form_card_heading" />
+                    <com.google.android.material.divider.MaterialDivider
+                        app:dividerColor="@color/black"
+                        style="@style/form_card_divider" />
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/form_radio_group_padding">
+                        <RadioButton
+                            android:id="@+id/maleRadiobutton"
+                            android:text="@string/male"
+                            style="@style/form_radio_button" />
+                        <RadioButton
+                            android:id="@+id/femaleRadioButton"
+                            android:text="@string/female"
+                            style="@style/form_radio_button" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView style="@style/form_card_view">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="@string/languages_known"
+                        style="@style/form_card_heading" />
+                    <com.google.android.material.divider.MaterialDivider
+                        app:dividerColor="@color/black"
+                        style="@style/form_card_divider" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/form_check_box_layout_padding">
+
+                        <CheckBox
+                            android:id="@+id/englishCheckBox"
+                            android:text="@string/english"
+                            style="@style/form_check_box" />
+                        <CheckBox
+                            android:id="@+id/hindiCheckBox"
+                            android:text="@string/hindi"
+                            style="@style/form_check_box" />
+                        <CheckBox
+                            android:id="@+id/gujaratiCheckBox"
+                            android:text="@string/gujarati"
+                            style="@style/form_check_box" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addDataButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:padding="10dp"
+                android:text="@string/add_data"
+                android:clickable="true"
+                android:focusable="true"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>
