@@ -19,7 +19,7 @@ import com.tatvasoft.tatvasoftassignment10.databinding.FragmentUserListBinding;
 import java.util.ArrayList;
 
 public class UserListFragment extends Fragment {
-
+    
     public UserListFragment() {
         // Required empty public constructor
     }
@@ -35,26 +35,16 @@ public class UserListFragment extends Fragment {
         // Inflate the layout for this fragment
         FragmentUserListBinding binding = FragmentUserListBinding.inflate(LayoutInflater.from(getContext()));
         requireActivity().setTitle(getString(R.string.user_list_title));
-        ArrayList<UserModel> userModelArrayList = new ArrayList<>();
+        ArrayList<UserModel> userModelArrayList;
         UserDatabase userDatabase = new UserDatabase(requireContext());
-        if(userDatabase.getAllData() != null) {
-            userModelArrayList = userDatabase.getAllData();
-        }
+
+        userModelArrayList = userDatabase.getAllData();
 
         binding.userRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         UserAdapter userAdapter = new UserAdapter(requireContext(), userModelArrayList);
         binding.userRecyclerView.setAdapter(userAdapter);
         userAdapter.notifyDataSetChanged();
         userAdapter.notifyItemRangeChanged(0, userModelArrayList.size());
-        if(userModelArrayList.isEmpty())
-        {
-            binding.noDataTextView.setVisibility(View.VISIBLE);
-            binding.userRecyclerView.setVisibility(View.GONE);
-
-        }else {
-            binding.userRecyclerView.setVisibility(View.VISIBLE);
-            binding.noDataTextView.setVisibility(View.GONE);
-        }
 
         binding.addFloatingActionButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_baseline_person_add_alt_24));
         binding.addFloatingActionButton.setOnClickListener(v -> {

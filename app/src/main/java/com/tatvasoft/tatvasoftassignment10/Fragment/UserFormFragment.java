@@ -68,8 +68,6 @@ public class UserFormFragment extends Fragment{
         return binding.getRoot();
     }
 
-
-
     private void addButtonCLick()
     {
         binding.addDataButton.setOnClickListener(v -> {
@@ -92,7 +90,7 @@ public class UserFormFragment extends Fragment{
                             Objects.requireNonNull(binding.birthDatePicker.getText()).toString(),
                             binding.bloodGroupSpinner.getText().toString(),
                             binding.countrySpinner.getText().toString(),
-                            binding.maleRadiobutton.isChecked() ? Constant.MALE : getString(R.string.female),
+                            binding.maleRadiobutton.isChecked() ? Constant.MALE : Constant.FEMALE,
                             getLanguages() );
                     Toast.makeText(getContext(),getString(R.string.toast_updated) ,Toast.LENGTH_SHORT).show();
                 }
@@ -191,6 +189,7 @@ public class UserFormFragment extends Fragment{
                         day1);
                 datePickerDialog.show();
                 binding.birthDatePicker.setError(null);
+
             }
             return false;
         });

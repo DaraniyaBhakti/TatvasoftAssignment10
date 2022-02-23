@@ -12,9 +12,6 @@ public class UserModel implements Serializable {
     private String gender;
     private String languages;
 
-    public UserModel() {
-    }
-
     public UserModel(int userId,
                      String userName,
                      String contactNo,
@@ -96,4 +93,5 @@ public class UserModel implements Serializable {
     public void setLanguages(String languages) {
         this.languages = languages;
     }
+
 }

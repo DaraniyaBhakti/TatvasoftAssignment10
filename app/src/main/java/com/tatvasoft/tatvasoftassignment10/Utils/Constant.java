@@ -5,4 +5,6 @@ public class Constant {
     public static String EDIT_DATA_USER_ID_KEY = "UserId";
     public static String MALE = "Male";
     public static String FEMALE = "Female";
+
+
 }
