@@ -137,10 +137,12 @@ public class UserFormFragment extends Fragment{
                         calendar.get(Calendar.MONTH),
                         calendar.get(Calendar.DAY_OF_MONTH));
                 datePickerDialog.show();
+                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
                 binding.birthDatePicker.setError(null);
             }
             return false;
         });
+
     }
 
 
@@ -188,6 +190,7 @@ public class UserFormFragment extends Fragment{
                         month1-1,
                         day1);
                 datePickerDialog.show();
+                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
                 binding.birthDatePicker.setError(null);
 
             }
